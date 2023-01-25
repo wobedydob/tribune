@@ -1,15 +1,15 @@
 <template>
 
-  <newspaper-item></newspaper-item>
+  <news-room></news-room>
 
 </template>
 
 <script>
 
-import "./Newspaper/NewspaperItem.vue"
-import NewspaperItem from "./Newspaper/NewspaperItem.vue";
+import NewsRoom from "./NewsRoom.vue";
+
 export default {
   name: "HomePage",
-  components: {NewspaperItem}
+  components: {NewsRoom}
 }
 </script>
