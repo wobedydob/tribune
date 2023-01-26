@@ -8,7 +8,7 @@
 
             <div class="columns">
 
-                <news-column v-if="newspaper"  v-for="article in this.articles" :key="article.id" :article="article"></news-column>
+                <news-article v-if="newspaper"  v-for="article in this.articles" :key="article.id" :article="article"></news-article>
 
             </div>
 
@@ -20,7 +20,7 @@
 <script>
 
 import NewspaperHeadline from "./NewspaperHeadline.vue";
-import NewsColumn from "./NewsColumn.vue";
+import NewsArticle from "./NewsArticle.vue";
 
 export default {
     name: "NewspaperItem",
@@ -64,7 +64,7 @@ export default {
 
     components: {
         NewspaperHeadline,
-        NewsColumn
+        NewsArticle
     }
 }
 </script>
