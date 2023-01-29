@@ -6,6 +6,18 @@
             <p><span class="headline hl4">by {{ this.author }}</span></p>
         </div>
 
+        <template v-for="content in body">
+
+            <div v-if="content.type === 'text'">
+                {{ content.content }}
+            </div>
+
+            <figure v-else-if="content.type === 'image'">
+                <img class="media" :src="content.url" :alt="content.caption">
+            </figure>
+
+        </template>
+
     </div>
 
 </template>
