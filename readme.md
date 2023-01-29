@@ -3,7 +3,7 @@ This open-source webapplication allows roleplayers from [Wild West RP](https://w
 
 
 ## 📦 Build Versions
-[![self](https://img.shields.io/badge/current_build-1.0.0-6BA4AE?style=for-the-badge&logo=github&logoColor=white)](https://github.com/wobedydob/equivoluent)
+[![self](https://img.shields.io/badge/current_build-1.1.0-6BA4AE?style=for-the-badge&logo=github&logoColor=white)](https://github.com/wobedydob/tribune)
 
 
 [![vuejs](https://img.shields.io/badge/@vue/cli-5.0.8-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)](https://vuejs.org/)
