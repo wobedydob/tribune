@@ -46,12 +46,6 @@ export default {
 
     methods: {
 
-        getNewspaper(id = 0) {
-
-            return this.getById(this.newspapers, id)
-
-        },
-
         getNewest(data) {
             return data.slice(-1)[0];
         },
