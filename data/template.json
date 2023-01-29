@@ -1,0 +1,30 @@
+{
+    "_id": {
+        "$oid": "OID"
+    },
+    "newspapers": [
+        {
+            "articles": [
+                {
+                    "headline": "HEADLINE",
+                    "body": [
+                        {
+                            "type": "text",
+                            "content": "THIS IS SOME TEXT"
+                        },
+                        {
+                            "type": "image",
+                            "url": "http://i.giphy.com/PW7MoTD2d9pJK.gif",
+                            "caption": "THIS IS AN IMAGE"
+                        },
+                        {
+                            "type": "text",
+                            "content": "A BIT MORE TEXT THAN WHAT WAS WRITTEN ABOVE THE IMAGE"
+                        }
+                    ],
+                    "author": "AUTHOR NAME"
+                }
+            ]
+        }
+    ]
+}
