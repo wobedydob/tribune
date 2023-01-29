@@ -1,4 +1,7 @@
 {
+    "_id": {
+        "$oid": "63d2e7538ebdbf89f0cd496c"
+    },
     "newspapers": [
         {
             "articles": [
@@ -11,8 +14,8 @@
                         },
                         {
                             "type": "image",
-                            "url": "#insertimage",
-                            "caption": "Insert Image"
+                            "url": "http://i.giphy.com/PW7MoTD2d9pJK.gif",
+                            "caption": "Witch Queen"
                         },
                         {
                             "type": "text",
@@ -25,27 +28,59 @@
                     "headline": "An Unlikely Friendship",
                     "body": [
                         {
-                            "type:": "text",
+                            "type": "text",
                             "content": "In the gritty streets of Saint Denis, a powerful man ruled with an iron fist. But beneath the surface of his violent exterior, he was a lonely man, haunted by the memories of his past. One day, while wandering the city in search of a new way of life, he stumbled upon a small leprechaun. The leprechaun was looking for a way to return to his home in the Emerald Isle, and the man was touched by the leprechaun's plight. In a moment of unexpected kindness, the man offered to help the leprechaun return home. And so, the two unlikely friends set out on a journey filled with danger and adventure. Along the way, the man learned the true meaning of friendship, and the leprechaun showed him that there is more to life than violence and power. Despite the many obstacles they faced, the two friends never gave up on their quest. Finally, they reached the Emerald Isle, where the leprechaun was reunited with his family and friends. The man, who had never known true happiness, was finally able to let go of his past and start anew. As the two friends said their farewells, the leprechaun turned to the man and said, 'You have taught me the true meaning of friendship, and I will always be grateful.' And with that, the man returned to the city, a changed man, ready to leave behind his life of violence and start anew."
                         }
                     ],
                     "author": "Albert Spears"
+                },
+                {
+                    "headline": "A Man Named Bear",
+                    "body": [
+                        {
+                            "type": "text",
+                            "content": "Arthur 'Bear' Reigns was the most notorious outlaw in the Wild West. His reputation as a fierce fighter and ruthless killer struck fear in the hearts of all who knew of him. He was wanted in multiple states for a variety of crimes, including murder and robbery. But despite his fearsome reputation, there were those who saw a different side of 'Bear'. They spoke of a man who was fiercely loyal to his friends and had a code of honor that he lived by. Some even claimed that he had a heart of gold and only turned to a life of crime because of a tragic past. But whether he was a monster or a misunderstood soul, one thing was certain, crossing 'Bear' Reigns was a death sentence."
+                        },
+                        {
+                            "type": "image",
+                            "url": "https://media.discordapp.net/attachments/301791474381750272/901844321014263878/unknown.png?width=660&height=660",
+                            "caption": "Bear"
+                        }
+                    ],
+                    "author": "Unknown"
+                },
+                {
+                    "headline": "Emerald Dragon of Peace",
+                    "body": [
+                        {
+                            "type": "text",
+                            "content": "Once upon a time, in a far-off kingdom, there was a magical flying island called Aeros. The island was home to many different creatures, including dragons, griffins, and unicorns. However, the island was plagued by constant battles between the different factions of creatures. The dragons fought against the griffins, and the unicorns were caught in the middle. The island was a chaotic and dangerous place, with no peace in sight. One day, a green dragon named Emerald emerged from the depths of the island. She was different from the other dragons, who were fierce and war-like. Emerald was kind and peaceful, and she had a special power - she could control the winds. Emerald used her powers to bring peace to the island. She calmed the winds, making it difficult for the griffins to fly and fight. She also used her powers to create gentle breezes that soothed the dragons and unicorns, calming their tempers and making them more peaceful. The creatures of the island saw that Emerald's ways were better than their own and slowly put their weapons down. They saw the benefits of peace and started to coexist peacefully. With the help of Emerald, the island of Aeros was transformed into a peaceful and harmonious place. The different factions of creatures lived together in harmony, and the island became a beacon of hope for other kingdoms plagued by war and strife. And so, Emerald the green dragon brought peace to the flying island of Aeros and became known as the \"Dragon of Peace.\" Her legacy lived on, and the island remained a peaceful place for many years to come."
+                        }
+                    ],
+                    "author": "Charles Oakley"
+                },
+                {
+                    "headline": "Sweet Tooth",
+                    "body": [
+                        {
+                            "type": "text",
+                            "content": "Once upon a time, there was a mischievous child named Timmy. One day, Timmy's parents took him to a local candy store to buy some treats. Timmy was so excited to see all the different types of candy that he could hardly contain himself. As his parents were paying for their purchase, Timmy wandered off to explore the store. He marveled at the rows upon rows of different candies and couldn't resist the temptation to sample a few.But before he knew it, the store had closed and Timmy was locked inside. At first, he was scared and didn't know what to do. But then, he remembered all the candy that surrounded him and his fear turned to excitement.Timmy spent the night sampling every type of candy he could find, from gummy bears to chocolate bars. He even discovered a hidden room filled with even more candy that he had never seen before.As the night went on, Timmy's mischief got the best of him and he decided to play a few pranks on the store's mannequins. He gave them all different hats and mustaches made out of candy, making them look quite silly.The next morning, when the store owner unlocked the doors, he was shocked to find the store in such disarray. But as he looked closer, he saw the clever and creative ways that Timmy had used the candy and he couldn't help but laugh.From that day on, Timmy was known as the candy store's honorary prankster and was always welcome to come back and play. And as for Timmy, well, he never forgot the sweet adventure he had locked inside that candy store."
+                        }
+                    ]
                 }
             ]
         },
         {
             "articles": [
                 {
-                    "content": {
-                        "headline": "Emerald Dragon of Peace",
-                        "body": [
-                            {
-                                "type": "text",
-                                "content": "Once upon a time, in a far-off kingdom, there was a magical flying island called Aeros. The island was home to many different creatures, including dragons, griffins, and unicorns. However, the island was plagued by constant battles between the different factions of creatures. The dragons fought against the griffins, and the unicorns were caught in the middle. The island was a chaotic and dangerous place, with no peace in sight. One day, a green dragon named Emerald emerged from the depths of the island. She was different from the other dragons, who were fierce and war-like. Emerald was kind and peaceful, and she had a special power - she could control the winds. Emerald used her powers to bring peace to the island. She calmed the winds, making it difficult for the griffins to fly and fight. She also used her powers to create gentle breezes that soothed the dragons and unicorns, calming their tempers and making them more peaceful. The creatures of the island saw that Emerald's ways were better than their own and slowly put their weapons down. They saw the benefits of peace and started to coexist peacefully. With the help of Emerald, the island of Aeros was transformed into a peaceful and harmonious place. The different factions of creatures lived together in harmony, and the island became a beacon of hope for other kingdoms plagued by war and strife. And so, Emerald the green dragon brought peace to the flying island of Aeros and became known as the \"Dragon of Peace.\" Her legacy lived on, and the island remained a peaceful place for many years to come."
-                            }
-                        ],
-                        "author": "Charles Oakley"
-                    }
+                    "headline": "Emerald Dragon of Peace",
+                    "body": [
+                        {
+                            "type": "text",
+                            "content": "Once upon a time, in a far-off kingdom, there was a magical flying island called Aeros. The island was home to many different creatures, including dragons, griffins, and unicorns. However, the island was plagued by constant battles between the different factions of creatures. The dragons fought against the griffins, and the unicorns were caught in the middle. The island was a chaotic and dangerous place, with no peace in sight. One day, a green dragon named Emerald emerged from the depths of the island. She was different from the other dragons, who were fierce and war-like. Emerald was kind and peaceful, and she had a special power - she could control the winds. Emerald used her powers to bring peace to the island. She calmed the winds, making it difficult for the griffins to fly and fight. She also used her powers to create gentle breezes that soothed the dragons and unicorns, calming their tempers and making them more peaceful. The creatures of the island saw that Emerald's ways were better than their own and slowly put their weapons down. They saw the benefits of peace and started to coexist peacefully. With the help of Emerald, the island of Aeros was transformed into a peaceful and harmonious place. The different factions of creatures lived together in harmony, and the island became a beacon of hope for other kingdoms plagued by war and strife. And so, Emerald the green dragon brought peace to the flying island of Aeros and became known as the \"Dragon of Peace.\" Her legacy lived on, and the island remained a peaceful place for many years to come."
+                        }
+                    ],
+                    "author": "Charles Oakley"
                 }
             ]
         }
