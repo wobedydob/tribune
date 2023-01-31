@@ -17,13 +17,6 @@
 
         <div class="body">
 
-            <!--
-            TODO: The newspaper layout should have:
-            4 columns on a laptop as: outer-left left right outer-right
-            3 rows when scaled down as: outer-left, left & right, outer-right
-            4 rows when scaled down even more as: left, right, outer-left, outer-right
-             -->
-
             <div class="column column-outer-left">
 
                 <div class="article">
