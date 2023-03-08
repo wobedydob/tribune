@@ -6,6 +6,7 @@
   "license": "ISC",
   "main": "./assets/js/index.js",
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "webpack": "^5.26.3",

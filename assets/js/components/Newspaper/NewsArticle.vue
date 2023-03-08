@@ -1,10 +1,16 @@
 <template>
 
-    <div class="column">
-        <div class="head">
-            <span class="headline hl1">{{ this.headline }}</span>
-            <p><span class="headline hl4">by {{ this.author }}</span></p>
-        </div>
+    <div class="article">
+
+        <h2 class="headline">
+            {{ article.headline }}
+        </h2>
+
+        <p class="credit">
+            <span class="credit">
+                by {{ article.author }}
+            </span>
+        </p>
 
         <template v-for="content in body">
 

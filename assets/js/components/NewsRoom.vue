@@ -2,7 +2,7 @@
 
     <div class="newspaper">
 
-        <newspaper-item :newspaper="getNewspaper(0)"></newspaper-item>
+        <newspaper-item :newspaper="this.newspaper"></newspaper-item>
 
     </div>
 
@@ -10,7 +10,7 @@
 
 <script>
 
-import axios from "axios";
+import api from "../services/newspapers";
 import NewspaperItem from "./Newspaper/NewspaperItem.vue";
 
 export default {
@@ -19,40 +19,36 @@ export default {
     data() {
         return {
             newspapers: {},
+            newspaper: {},
             newestPaper: {},
         }
     },
 
-    created() {
-        axios.get(this.$API_URL)
-            .then(response => {
-
-                let newspapers = response.data.newspapers;
-
-                this.newspapers = newspapers
-                this.newestPaper = this.getNewest(newspapers)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-        ;
+    mounted() {
+        this.getNewest();
+        this.getNewspapers();
+        this.getNewspaper('63d2e7538ebdbf89f0cd496c');
     },
 
     methods: {
 
-        getNewspaper(id = 0) {
-
-            return this.getById(this.newspapers, id)
-
+        getNewspapers() {
+            api.read().then(response => {
+                this.newspapers = response.data;
+            });
         },
 
-        getNewest(data) {
-            return data.slice(-1)[0];
+        getNewspaper(id = null) {
+            api.read(id).then(response => {
+                this.newspaper = response.data;
+            });
         },
 
-        getById(data, id) {
-            return data[id];
-        }
+        getNewest() {
+            api.readLatest().then(response => {
+                this.newestPaper = response.data;
+            });
+        },
 
     },
 
