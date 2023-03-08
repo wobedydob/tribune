@@ -32,26 +32,56 @@ body {
   margin-bottom: 10px;
 }
 
-.column.column-outer-left, .column.column-left {
-  border-right: 1px solid #2f2f2f;
+.row {
+  display: flex;
+  justify-content: center;
 }
-.column.column-outer-right {
-  border-left: 1px solid #2f2f2f;
+.row .body {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
 }
-.column .article {
-  padding: 0 10px 10px;
+.row .article {
   position: relative;
+  height: auto;
+  flex-basis: 33.333%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.row .article::before, .row .article::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background-color: #2f2f2f;
+}
+.row .article::before {
+  left: 10px;
+}
+.row .article::after {
+  right: 10px;
+}
+.row .article figure {
+  margin: 10px 0;
+}
+.row .article img {
+  max-width: 100%;
+  height: auto;
+}
+.row .article .headline {
   margin-bottom: 10px;
 }
-.column .article h2 {
+.row .article h2 {
   padding-top: 10px;
   position: relative;
   align-items: center;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 20% 20px;
 }
-.column .article .line:after {
+.row .article .line:after {
   content: "";
   position: absolute;
   bottom: -0.3em;
@@ -62,28 +92,17 @@ body {
   margin: auto;
   width: 65px;
 }
-.column .article:after {
-  content: "";
-  position: absolute;
-  bottom: -0.3em;
-  left: 0;
-  right: 0;
-  height: 1.5px;
-  background-color: #2f2f2f;
-  margin: auto;
-  width: 90%;
-}
-.column .article p.credit {
+.row .article p.credit {
   text-align: center;
 }
-.column .article p.credit .credit {
+.row .article p.credit .credit {
   font-weight: 700;
   font-size: 12px;
   box-sizing: border-box;
   padding: 10px 0 10px 0;
   text-align: center;
 }
-.column .article p.credit .credit:before {
+.row .article p.credit .credit:before {
   border-top: 1px solid #2f2f2f;
   content: "";
   width: 100px;
@@ -91,13 +110,16 @@ body {
   display: block;
   margin: 0 auto;
 }
-.column .article p.credit .credit:after {
+.row .article p.credit .credit:after {
   border-bottom: 1px solid #2f2f2f;
   content: "";
   width: 100px;
   height: 10px;
   display: block;
   margin: 0 auto;
+}
+.row .article .content {
+  padding: 0 10%;
 }
 
 .footer {
@@ -107,69 +129,13 @@ body {
   border-width: 2px 0;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 0.6fr 1.9fr 0.5fr;
-  grid-template-rows: 0.3fr 2.4fr 0.1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: "head head head" "body body body";
-}
-
-.head {
-  grid-area: head;
-}
-
-.body {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 1.5fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "column-outer-left column-left column-right column-outer-right" "column-outer-left column-left column-right column-outer-right" "column-outer-left column-left column-right column-outer-right";
-  grid-area: body;
-}
-
-.column-outer-left {
-  grid-area: column-outer-left;
-}
-
-.column-outer-right {
-  grid-area: column-outer-right;
-}
-
-.column-left {
-  grid-area: column-left;
-}
-
-.column-right {
-  grid-area: column-right;
-}
-
-.footer {
   margin-top: 10px;
   grid-area: footer;
 }
 
 @media screen and (max-width: 1000px) {
-  body {
-    min-height: auto;
-  }
-  .body {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "column-outer-left column-left" "column-right column-outer-right";
-  }
-  .column-right {
-    border-right: 1px solid #2f2f2f !important;
-  }
-  .column-left {
-    border-right: none !important;
-  }
-  .column-outer-right {
-    border-left: none !important;
+  .article {
+    flex-basis: 50% !important;
   }
 }
 @media screen and (max-width: 550px) {
@@ -178,14 +144,8 @@ body {
     line-height: 54px;
     overflow: hidden;
   }
-  .body {
-    display: block;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "column-outer-left" "column-left" "column-right" "column-outer-right";
-  }
-  .column {
-    border: none !important;
+  .article {
+    flex-basis: 100% !important;
   }
 }
 @media only all and (max-width: 300px) {

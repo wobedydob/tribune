@@ -15,16 +15,19 @@
 
         </div>
 
-        <div class="body">
+        <div class="row">
 
-            <div class="column">
+            <div class="body">
+
                 <news-article
                     v-if="newspaper"
                     v-for="article in this.articles" :key="article.id"
                     :article="article
-                "></news-article>
-            </div>
+                ">
+                </news-article>
 
+
+            </div>
         </div>
 
     </div>

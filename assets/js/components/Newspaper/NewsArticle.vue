@@ -2,17 +2,20 @@
 
     <div class="article">
 
-        <h2 class="headline">
-            {{ article.headline }}
-        </h2>
+        <div class="headline">
+            <h2>
+                {{ article.headline }}
+            </h2>
 
-        <p class="credit">
-            <span class="credit">
-                by {{ article.author }}
-            </span>
-        </p>
+            <p class="credit">
+                <span class="credit">
+                    by {{ article.author }}
+                </span>
+            </p>
 
-        <template v-for="content in body">
+        </div>
+
+        <div class="content" v-for="content in body">
 
             <div v-if="content.type === 'text'">
                 {{ content.content }}
@@ -22,7 +25,7 @@
                 <img class="media" :src="content.url" :alt="content.caption">
             </figure>
 
-        </template>
+        </div>
 
     </div>
 
