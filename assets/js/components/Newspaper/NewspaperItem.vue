@@ -66,7 +66,7 @@ export default {
 
     mounted() {
 
-        this.articles = this.$props.newspaper
+        this.articles = this.$props.newspaper.articles
 
     },
 
