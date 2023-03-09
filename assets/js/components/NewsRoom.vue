@@ -2,7 +2,7 @@
 
     <div class="newspaper">
 
-        <newspaper-item :newspaper="this.newestPaper"></newspaper-item>
+        <newspaper-item :newspaper="this.newestPaper" v-if="!loading"></newspaper-item>
 
     </div>
 
@@ -21,12 +21,13 @@ export default {
             newspapers: {},
             newspaper: {},
             newestPaper: {},
+
+            loading: true
         }
     },
 
     mounted() {
         this.getNewest();
-        this.getNewspapers();
     },
 
     methods: {
@@ -44,8 +45,14 @@ export default {
         },
 
         getNewest() {
-            api.readLatest().then(response => {
+            api.readLatest()
+                .then(response => {
                 this.newestPaper = response.data;
+                this.loading = false;
+            }).catch(error => {
+
+                this.loading = true
+
             });
         },
 
