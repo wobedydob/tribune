@@ -2,7 +2,7 @@
 
     <div class="newspaper">
 
-        <newspaper-item :newspaper="this.newspaper"></newspaper-item>
+        <newspaper-item :newspaper="this.newestPaper"></newspaper-item>
 
     </div>
 
@@ -27,7 +27,6 @@ export default {
     mounted() {
         this.getNewest();
         this.getNewspapers();
-        this.getNewspaper('63d2e7538ebdbf89f0cd496c');
     },
 
     methods: {

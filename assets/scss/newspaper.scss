@@ -48,36 +48,41 @@ body {
 .row {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     .body {
-        min-height: 100vh;
         padding: 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: start;
+        align-items: flex-start;
     }
 
     .article {
         position: relative;
-        height: auto;
-        flex-basis: 33.333%;
+        flex-basis: 25%;
         box-sizing: border-box;
-        padding: 0 20px;
+        padding: 0 20px 20px;
+        overflow: hidden;
 
-        &::before, &::after {
-            content: "";
-            position: absolute;
-            top: 10px; // adjust this value to control the distance between the border and the edge of the article
-            bottom: 10px; // adjust this value to control the distance between the border and the edge of the article
-            width: 1px;
-            background-color: #2f2f2f;
-        }
+        &.column {
+            &:before, &:after {
+                content: "";
+                position: absolute;
+                top: 10px;
+                bottom: 10px;
+                width: 1px;
+                background-color: #2f2f2f;
+            }
 
-        &::before {
-            left: 10px;
-        }
-        &::after {
-            right: 10px;
+            &:before {
+                left: 10px;
+            }
+
+            &:after {
+                right: 10px;
+            }
+
         }
 
         figure {
@@ -129,7 +134,7 @@ body {
 
             .credit:before {
                 border-top: 1px solid #2f2f2f;
-                content: '';
+                content: "";
                 width: 100px;
                 height: 7px;
                 display: block;
@@ -138,7 +143,7 @@ body {
 
             .credit:after {
                 border-bottom: 1px solid #2f2f2f;
-                content: '';
+                content: "";
                 width: 100px;
                 height: 10px;
                 display: block;
@@ -152,7 +157,30 @@ body {
             padding: 0 10%;
         }
 
+        &.advert {
+            position: relative;
+            padding: 20px;
+
+            h2 {
+                margin-top: 0;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 10px;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                border: 5px double #000;
+            }
+
+        }
+
+
+
     }
+
 }
 
 .footer {

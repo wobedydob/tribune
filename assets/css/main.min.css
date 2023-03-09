@@ -35,22 +35,23 @@ body {
 .row {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .row .body {
-  min-height: 100vh;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
+  align-items: flex-start;
 }
 .row .article {
   position: relative;
-  height: auto;
-  flex-basis: 33.333%;
+  flex-basis: 25%;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 20px 20px;
+  overflow: hidden;
 }
-.row .article::before, .row .article::after {
+.row .article.column:before, .row .article.column:after {
   content: "";
   position: absolute;
   top: 10px;
@@ -58,10 +59,10 @@ body {
   width: 1px;
   background-color: #2f2f2f;
 }
-.row .article::before {
+.row .article.column:before {
   left: 10px;
 }
-.row .article::after {
+.row .article.column:after {
   right: 10px;
 }
 .row .article figure {
@@ -120,6 +121,22 @@ body {
 }
 .row .article .content {
   padding: 0 10%;
+}
+.row .article.advert {
+  position: relative;
+  padding: 20px;
+}
+.row .article.advert h2 {
+  margin-top: 0;
+}
+.row .article.advert:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  border: 5px double #000;
 }
 
 .footer {

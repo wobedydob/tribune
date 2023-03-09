@@ -1,18 +1,18 @@
 <template>
 
-    <div class="article column">
+    <div class="article advert">
 
-        <template v-if="article.type === 'article'">
+        <template v-if="advert.type === 'advert'">
 
             <div class="headline">
 
-                <h2 v-if="article.headline">
-                    {{ article.headline }}
+                <h2 v-if="advert.headline">
+                    {{ advert.headline }}
                 </h2>
 
-                <p class="credit" v-if="article.author">
+                <p class="credit" v-if="advert.author">
                 <span class="credit">
-                    by {{ article.author }}
+                    by {{ advert.author }}
                 </span>
                 </p>
 
@@ -38,9 +38,9 @@
 
 <script>
 export default {
-    name: "NewsArticle",
+    name: "NewsAdvert",
 
-    props: ['article'],
+    props: ['advert'],
 
     data() {
         return {
@@ -51,10 +51,10 @@ export default {
     },
 
     created() {
-        if (this.article) {
-            this.headline = this.article.headline;
-            this.body = this.article.body;
-            this.author = this.article.author
+        if (this.advert) {
+            this.headline = this.advert.headline;
+            this.body = this.advert.body;
+            this.author = this.advert.author
         }
     },
 

@@ -20,14 +20,21 @@
             <div class="body">
 
                 <news-article
-                    v-if="newspaper"
+                    v-if="newspaper && article.type === 'article'"
                     v-for="article in this.articles" :key="article.id"
                     :article="article
                 ">
                 </news-article>
 
+                <news-advert
+                    v-if="newspaper && article.type === 'advert'"
+                    v-for="article in this.articles" :key="article.id"
+                    :advert="article
+                ">
+                </news-advert>
 
             </div>
+
         </div>
 
     </div>
@@ -38,6 +45,7 @@
 
 import NewspaperHeadline from "./NewspaperHeadline.vue";
 import NewsArticle from "./NewsArticle.vue";
+import NewsAdvert from "./NewsAdvert.vue";
 
 export default {
     name: "NewspaperItem",
@@ -104,7 +112,8 @@ export default {
 
     components: {
         NewspaperHeadline,
-        NewsArticle
+        NewsArticle,
+        NewsAdvert
     }
 }
 </script>
