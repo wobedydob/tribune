@@ -15,27 +15,23 @@
 
         </div>
 
-        <div class="row">
 
-            <div class="body">
 
+        <div class="body">
+
+            <magic-grid>
                 <news-article
-                    v-if="newspaper && article.type === 'article'"
+                    v-if="newspaper"
                     v-for="article in this.articles" :key="article.id"
                     :article="article
                 ">
                 </news-article>
+            </magic-grid>
 
-                <news-advert
-                    v-if="newspaper && article.type === 'advert'"
-                    v-for="article in this.articles" :key="article.id"
-                    :advert="article
-                ">
-                </news-advert>
 
-            </div>
 
         </div>
+
 
     </div>
 
@@ -45,7 +41,8 @@
 
 import NewspaperHeadline from "./NewspaperHeadline.vue";
 import NewsArticle from "./NewsArticle.vue";
-import NewsAdvert from "./NewsAdvert.vue";
+
+import MagicGrid from "../MagicGrid.vue";
 
 export default {
     name: "NewspaperItem",
@@ -113,7 +110,7 @@ export default {
     components: {
         NewspaperHeadline,
         NewsArticle,
-        NewsAdvert
+        MagicGrid
     }
 }
 </script>

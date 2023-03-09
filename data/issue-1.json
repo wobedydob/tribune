@@ -95,6 +95,7 @@
         },
         {
             "type": "advert",
+            "headline": "The Four Horsemen",
             "body": [
                 {
                     "type": "text",
@@ -107,6 +108,29 @@
                 {
                     "type": "text",
                     "content": "We also offer free food and hot drinks to those in need"
+                }
+            ]
+        },
+        {},
+        {
+            "type": "advert",
+            "headline": "YOUR AD HERE!",
+            "body": [
+                {
+                    "type": "text",
+                    "content": "Attention all business owners and advertisers!"
+                },
+                {
+                    "type": "text",
+                    "content": "Are you looking for an affordable way to promote your products or services? Our newspaper company has got you covered."
+                },
+                {
+                    "type": "text",
+                    "content": "We are offering ad space for just 25 dollars. This is your chance to get your message seen by a wide audience and boost your business."
+                },
+                {
+                    "type": "text",
+                    "content": "Simply provide us with your ad copy and we'll take care of the rest. It's as easy as that! Don't miss out on this incredible opportunity to advertise with us. Contact us today and reserve your spot"
                 }
             ]
         }

@@ -32,57 +32,33 @@ body {
   margin-bottom: 10px;
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.row .body {
+.body {
   padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  align-items: flex-start;
 }
-.row .article {
-  position: relative;
-  flex-basis: 25%;
+
+.article {
   box-sizing: border-box;
   padding: 0 20px 20px;
   overflow: hidden;
 }
-.row .article.column:before, .row .article.column:after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  width: 1px;
-  background-color: #2f2f2f;
-}
-.row .article.column:before {
-  left: 10px;
-}
-.row .article.column:after {
-  right: 10px;
-}
-.row .article figure {
+.article figure {
   margin: 10px 0;
 }
-.row .article img {
+.article img {
   max-width: 100%;
   height: auto;
 }
-.row .article .headline {
+.article .headline {
   margin-bottom: 10px;
 }
-.row .article h2 {
+.article h2 {
   padding-top: 10px;
   position: relative;
   align-items: center;
   text-transform: uppercase;
   text-align: center;
 }
-.row .article .line:after {
+.article .line:after {
   content: "";
   position: absolute;
   bottom: -0.3em;
@@ -93,17 +69,17 @@ body {
   margin: auto;
   width: 65px;
 }
-.row .article p.credit {
+.article p.credit {
   text-align: center;
 }
-.row .article p.credit .credit {
+.article p.credit .credit {
   font-weight: 700;
   font-size: 12px;
   box-sizing: border-box;
   padding: 10px 0 10px 0;
   text-align: center;
 }
-.row .article p.credit .credit:before {
+.article p.credit .credit:before {
   border-top: 1px solid #2f2f2f;
   content: "";
   width: 100px;
@@ -111,7 +87,7 @@ body {
   display: block;
   margin: 0 auto;
 }
-.row .article p.credit .credit:after {
+.article p.credit .credit:after {
   border-bottom: 1px solid #2f2f2f;
   content: "";
   width: 100px;
@@ -119,23 +95,19 @@ body {
   display: block;
   margin: 0 auto;
 }
-.row .article .content {
-  padding: 0 10%;
-}
-.row .article.advert {
-  position: relative;
+.article.advert {
   padding: 20px;
 }
-.row .article.advert h2 {
+.article.advert h2 {
   margin-top: 0;
 }
-.row .article.advert:before {
+.article.advert:before {
   content: "";
   position: absolute;
   top: 10px;
   bottom: 10px;
-  left: 10px;
-  right: 10px;
+  left: 0;
+  right: 0;
   border: 5px double #000;
 }
 

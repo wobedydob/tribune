@@ -12,11 +12,6 @@ body {
     padding: 0;
 }
 
-
-/* Debug Bordering */
-//.container * { border: 1px solid red; position: relative; }
-//
-
 // region Newspaper
 
 .head {
@@ -45,143 +40,106 @@ body {
 
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 
-    .body {
-        padding: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: start;
-        align-items: flex-start;
+.body {
+    padding: 20px;
+}
+
+.article {
+    box-sizing: border-box;
+    padding: 0 20px 20px;
+    overflow: hidden;
+
+    figure {
+        margin: 10px 0;
     }
 
-    .article {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .headline {
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        padding-top: 10px;
         position: relative;
-        flex-basis: 25%;
-        box-sizing: border-box;
-        padding: 0 20px 20px;
-        overflow: hidden;
+        align-items: center;
+        text-transform: uppercase;
+        text-align: center;
+    }
 
-        &.column {
-            &:before, &:after {
-                content: "";
-                position: absolute;
-                top: 10px;
-                bottom: 10px;
-                width: 1px;
-                background-color: #2f2f2f;
-            }
+    .line {
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -0.3em;
+            left: 0;
+            right: 0;
+            height: 1.5px;
+            background-color: #2f2f2f;
+            margin: auto;
+            width: 65px;
+        }
+    }
 
-            &:before {
-                left: 10px;
-            }
+    p.credit {
 
-            &:after {
-                right: 10px;
-            }
+        text-align: center;
+
+        .credit {
+            font-weight: 700;
+            font-size: 12px;
+            box-sizing: border-box;
+            padding: 10px 0 10px 0;
+            text-align: center;
+        }
+
+        .credit:before {
+            border-top: 1px solid #2f2f2f;
+            content: "";
+            width: 100px;
+            height: 7px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .credit:after {
+            border-bottom: 1px solid #2f2f2f;
+            content: "";
+            width: 100px;
+            height: 10px;
+            display: block;
+            margin: 0 auto;
 
         }
 
-        figure {
-            margin: 10px 0;
-        }
+    }
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .headline {
-            margin-bottom: 10px;
-        }
+    &.advert {
+        padding: 20px;
 
         h2 {
-            padding-top: 10px;
-            position: relative;
-            align-items: center;
-            text-transform: uppercase;
-            text-align: center;
+            margin-top: 0;
         }
 
-        .line {
-            &:after {
-                content: "";
-                position: absolute;
-                bottom: -0.3em;
-                left: 0;
-                right: 0;
-                height: 1.5px;
-                background-color: #2f2f2f;
-                margin: auto;
-                width: 65px;
-            }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            border: 5px double #000;
         }
-
-        p.credit {
-
-            text-align: center;
-
-            .credit {
-                font-weight: 700;
-                font-size: 12px;
-                box-sizing: border-box;
-                padding: 10px 0 10px 0;
-                text-align: center;
-            }
-
-            .credit:before {
-                border-top: 1px solid #2f2f2f;
-                content: "";
-                width: 100px;
-                height: 7px;
-                display: block;
-                margin: 0 auto;
-            }
-
-            .credit:after {
-                border-bottom: 1px solid #2f2f2f;
-                content: "";
-                width: 100px;
-                height: 10px;
-                display: block;
-                margin: 0 auto;
-
-            }
-
-        }
-
-        .content {
-            padding: 0 10%;
-        }
-
-        &.advert {
-            position: relative;
-            padding: 20px;
-
-            h2 {
-                margin-top: 0;
-            }
-
-            &:before {
-                content: "";
-                position: absolute;
-                top: 10px;
-                bottom: 10px;
-                left: 10px;
-                right: 10px;
-                border: 5px double #000;
-            }
-
-        }
-
-
 
     }
 
+
 }
+
 
 .footer {
     text-align: center;
@@ -197,11 +155,6 @@ body {
 // endregion Newspaper
 
 // region Responsive
-@media screen and (max-width: 1000px) {
-    .article {
-        flex-basis: 50% !important;
-    }
-}
 
 @media screen and (max-width: 550px) {
 
@@ -213,10 +166,6 @@ body {
             overflow: hidden;
         }
 
-    }
-
-    .article {
-        flex-basis: 100% !important;
     }
 
 }

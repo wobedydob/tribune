@@ -6,7 +6,6 @@
   "license": "ISC",
   "main": "./assets/js/index.js",
   "devDependencies": {
-    "dotenv": "^16.0.3",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "webpack": "^5.26.3",
@@ -24,6 +23,7 @@
     "postcss-loader": "^5.2.0",
     "vue": "^2.6.12",
     "vue-loader": "^15.9.6",
+    "vue-magic-grid": "^0.0.4",
     "vue-template-compiler": "^2.6.12"
   },
   "scripts": {

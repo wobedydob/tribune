@@ -1,36 +1,32 @@
 <template>
 
-    <div class="article column">
+    <div class="article" :class="getClass()">
 
-        <template v-if="article.type === 'article'">
+        <div class="headline">
 
-            <div class="headline">
+            <h2 v-if="article.headline">
+                {{ article.headline }}
+            </h2>
 
-                <h2 v-if="article.headline">
-                    {{ article.headline }}
-                </h2>
-
-                <p class="credit" v-if="article.author">
+            <p class="credit" v-if="article.author">
                 <span class="credit">
                     by {{ article.author }}
                 </span>
-                </p>
+            </p>
 
-            </div>
+        </div>
 
-            <div class="content" v-for="content in body">
+        <div class="content" v-for="content in body">
 
-                <p v-if="content.type === 'text'">
-                    {{ content.content }}
-                </p>
+            <p v-if="content.type === 'text'">
+                {{ content.content }}
+            </p>
 
-                <figure v-else-if="content.type === 'image'">
-                    <img class="media" :src="content.url" :alt="content.caption">
-                </figure>
+            <figure v-else-if="content.type === 'image'">
+                <img class="media" :src="content.url" :alt="content.caption">
+            </figure>
 
-            </div>
-
-        </template>
+        </div>
 
     </div>
 
@@ -46,7 +42,8 @@ export default {
         return {
             headline: '',
             body: [],
-            author: ''
+            author: '',
+            type: ''
         }
     },
 
@@ -54,9 +51,26 @@ export default {
         if (this.article) {
             this.headline = this.article.headline;
             this.body = this.article.body;
-            this.author = this.article.author
+            this.author = this.article.author;
+            this.type = this.article.type;
         }
     },
+
+    methods: {
+
+        getClass() {
+
+            if(this.type === 'advert') {
+                return this.type
+            }
+
+            if(this.type === 'article') {
+                return 'column';
+            }
+
+        }
+
+    }
 
 }
 </script>
